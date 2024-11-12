@@ -10,38 +10,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 300px; 
+  gap: 20px; 
 }
 
-.article-card .ArticleCard {
-  background-color: #1c1c1c;
-  border: 2px solid #333;
-  padding: 15px;
-  width: 200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.article-card {
+  box-shadow:  10px 4px 8px rgb(255, 0, 0);
   transition: transform 0.2s ease-in-out;
+  background-color: var(--primary-color);
 }
 
-.article-card .ArticleCard:hover {
+.article-card:hover {
   transform: scale(1.5);
 }
 
-.article-card .ArticleCard img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.article-card .ArticleCard h3 {
-  font-size: 1rem;
-  color: #ffffff; 
-  margin: 5px 0;
-  text-align: center;
-}
-
-.article-card .ArticleCard p {
-  font-size: 1rem;
-  color: #ffcc00; 
-  text-align: center;
-  margin-top: 5px;
-}

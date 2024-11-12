@@ -47,6 +47,7 @@ function App() {
 
 
 console.log(articleList)
+console.log(testData)
   useEffect(()=>{
     // fetchNews()
   }, []);
@@ -56,7 +57,7 @@ console.log(articleList)
       <Nav setFilteredArticles={setFilteredArticles} articlesList = {articleList} filteredArticles={filteredArticles}/>
       <Routes>
         <Route path='/' element={<ArticlesList articlesList={filteredArticles} search={searchTerm} setFeaturedArticle={setFeaturedArticle}/>}></Route>
-        <Route path=':search/:id' element={<FeaturedArticle article={featuredArticle}/>}></Route>
+        <Route path=':search/:id' element={<FeaturedArticle article={featuredArticle} setFeaturedArticle={setFeaturedArticle}/>}></Route>
       </Routes>
       Should see words here
     </div>

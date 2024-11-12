@@ -19,9 +19,5 @@ function ArticleCard({
   );
 }
 
-ArticleCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  // description: PropTypes.string.isRequired,
-}
 
 export default ArticleCard;
