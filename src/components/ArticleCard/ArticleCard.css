@@ -1,0 +1,42 @@
+.article-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+
+}
+
+a:link {
+  color: var(--white);
+  text-decoration: none;
+}
+
+a:visited{
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+.article-image {
+  width: 35vmin;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid var(--white);
+}
+
+.article-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 25vmin;
+  min-height: 15vmin;
+}
+
+.article-card:hover {
+  transform: scale(1.15);
+}
