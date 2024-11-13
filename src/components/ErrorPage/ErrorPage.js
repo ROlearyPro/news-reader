@@ -5,7 +5,7 @@ function ErrorPage({error}) {
 const { code } = useParams();
 
 const errorCode = error || code
-console.error(errorCode);
+console.error(error + " error: "+ errorCode);
 
     return (
         <section>

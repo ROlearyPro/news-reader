@@ -29,11 +29,13 @@ a:visited{
   border: 1px solid var(--secondary-color);
 }
 
-.article-title {
+.article-title, .article-author {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 25vmin;
+}
+.article-title{
   min-height: 15vmin;
 }
 

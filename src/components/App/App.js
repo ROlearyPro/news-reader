@@ -40,7 +40,6 @@ function App() {
       .then((data) => {
         setArticleList(data.articles);
         setFilteredArticles([...data.articles])
-        console.log(data);
       })
       .catch((err) => {
         console.error(err);
@@ -49,8 +48,6 @@ function App() {
   }
 
 
-// console.log(articleList)
-// console.log(testData)
   useEffect(()=>{
     fetchNews()
   }, []);
