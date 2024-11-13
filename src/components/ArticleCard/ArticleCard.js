@@ -9,7 +9,7 @@ function ArticleCard({
       <div className='set-article' >
       <div className="article-card">
         <h3 className="article-title">{title}</h3>
-        <img className='article-image' src={imageUrl} alt="image for article">{}</img>
+        <img className='article-image' src={imageUrl} alt="no image for article">{}</img>
         <div className='article-author'>
           {author}
         </div>

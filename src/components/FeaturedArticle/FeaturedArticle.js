@@ -57,7 +57,7 @@ function FeaturedArticle({ article, setFeaturedArticle }) {
         <div className="featured-article-info">
           <div className="featured-article-title">
             <h2>{article.title}</h2>
-            {/* <h4>Published at :{article.publishedAt}</h4> */}
+            <h4>Published at :{article.publishedAt}</h4>
             <img className="featured-article-image" src={article.urlToImage} alt="image"></img>
           </div>
           <div className="featured-article-right-info">
