@@ -2,11 +2,11 @@ import './ArticlesList.css';
 import ArticleCard from '../ArticleCard/ArticleCard.js';
 import PropTypes from 'prop-types';
 
-function ArticlesList({ articlesList, search, setFeaturedArticle }) {
+function ArticlesList({ articleList, search, setFeaturedArticle }) {
   return (
     <div className='article-container'>
       <div className="all-article-cards">{
-        articlesList.map((article,  index) => {
+        articleList.map((article,  index) => {
           return (
             <ArticleCard
               title={article.title}
@@ -27,7 +27,7 @@ function ArticlesList({ articlesList, search, setFeaturedArticle }) {
 }
 
 ArticlesList.propTypes = {
-  articlesList: PropTypes.arrayOf(
+  articleList: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
     })

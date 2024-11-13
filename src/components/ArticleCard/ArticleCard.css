@@ -13,7 +13,7 @@
 }
 
 a:link {
-  color: var(--white);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 

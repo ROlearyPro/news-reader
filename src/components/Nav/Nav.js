@@ -3,7 +3,7 @@ import SearchTitle from '../SearchTitle/SearchTitle.js';
 import { Link } from 'react-router-dom';
 
 
-function Nav({ setFilteredArticles, articlesList, filteredArticles }) {
+function Nav({ setFilteredArticles, articleList, setSearchTerm, filteredArticles }) {
   return (
     <header>
         <div className="full-site-title">
@@ -13,7 +13,8 @@ function Nav({ setFilteredArticles, articlesList, filteredArticles }) {
 
         <SearchTitle
           setFilteredArticles={setFilteredArticles}
-          articlesList={articlesList}
+          setSearchTerm={setSearchTerm}
+          articleList={articleList}
           filteredArticles={filteredArticles}
         />
       </div>

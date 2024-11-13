@@ -10,6 +10,7 @@ function FeaturedArticle({ article, setFeaturedArticle }) {
   const navigate = useNavigate();
   const { search, id } = useParams();
   const [sourceName, setSourceName] = useState("");
+  const [slicedText, setSlicedText]= useState("");
 
 
   useEffect(() => {
@@ -55,17 +56,20 @@ function FeaturedArticle({ article, setFeaturedArticle }) {
           }
           return res.json()
         })
-        .then(data => {setFeaturedArticle(data.articles[id])
+        .then(data => {
+          setFeaturedArticle(data.articles[id])
           setSourceName(data.articles[id].source.name);
+          setSlicedText(data.articles[id].content.slice(0, data.articles[id].content.indexOf(`[`)))
           console.log(sourceName)
         })
         .catch(err => {
           console.error(err)
           navigate(`/error/${err.statusCode}`)
         });
-    }else{
+    } else {
       setSourceName(article.source.name);
       console.log(sourceName)
+      setSlicedText(article.content.slice(0, article.content.indexOf(`[`)))
 
     }
   };
@@ -77,20 +81,24 @@ function FeaturedArticle({ article, setFeaturedArticle }) {
       </Link>
       <>
         <div className="featured-article-info">
-          <div className="featured-article-title-poster-rating">
+          <div className="featured-article-title">
             <h2>{article.title}</h2>
-            <img className="featured-article-poster" src={article.urlToImage} alt="image"></img>
+            <img className="featured-article-image" src={article.urlToImage} alt="image"></img>
           </div>
           <div className="featured-article-right-info">
             <div className="featured-article-tagline">
               <h3>{article.description}</h3>
+
             </div>
             <div>Article Content:</div>
-            <p className="featured-article-overview">{article.content}</p>
-            <p className="featured-article-source">{sourceName} </p>
+            <p className="featured-article-overview">
+              {slicedText}
+              <br />
+              <a className="featured-article-source" href={article.url}>  Continue to {sourceName} </a>
+            </p>
+            {/* <p className="featured-article-source">{sourceName} </p> */}
 
-            {/* <Link to={sourceUrl} target="_blank">Source</Link> */}
-            
+
           </div>
         </div>
       </>

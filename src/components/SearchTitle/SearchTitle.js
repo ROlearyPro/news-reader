@@ -1,25 +1,29 @@
 import './SearchTitle.css';
 import { useState } from 'react';
 
-function SearchTitle({ setFilteredArticles, articlesList }) {
+function SearchTitle({ setFilteredArticles, articleList, filteredArticles, setSearchTerm}) {
   const [userSearchInput, setUserSearchInput] = useState('');
+  var newList;
 
   const handleSearchInput = (e) => {
+    setFilteredArticles(articleList)
+
     setUserSearchInput(() => e.target.value);
-    const newList = filterArticlesByTitle(e.target.value, articlesList)
+    setSearchTerm(()=>e.target.value)
+    newList = filterArticlesByTitle(e.target.value, articleList)
     setFilteredArticles(newList)
     
   };
 
   function filterArticlesByTitle(title, articles) {
-    console.log(articles)
-    console.log(title)
-    return articles[0].filter(article => article.title.toLowerCase().includes(title.toLowerCase()))
+
+    return articles.filter(article => article.title.toLowerCase().includes(title.toLowerCase()))
   };
 
   function clearForm() {
-    setFilteredArticles(articlesList);
+    setFilteredArticles(articleList);
     setUserSearchInput('');
+    setSearchTerm('');
   }
 
   const handleSearchReset = (e) => {

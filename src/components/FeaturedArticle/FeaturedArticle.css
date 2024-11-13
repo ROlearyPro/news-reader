@@ -26,44 +26,37 @@
   border-style: solid;
   border-color: rgb(111, 82, 157);
   border-radius: 5px;
-  margin: 25px
+  margin: 25px;
+  cursor: pointer;
 }
 
-.featured-article-title-poster-rating {
-  width: clamp(210px, 26vw, 300px);
+.featured-article-title {
+  width: clamp(40vmin, 60vmin, 80vmin);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
 
-.featured-article-poster {
+.featured-article-image {
   width: clamp(300px, 50vmin, 90vmin);
   border: 1px solid var(--tertiary-color);
   border-radius: 5px
 }
 
-.featured-article-rating {
-  margin: 0.83em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .featured-article-right-info {
-  width: clamp(295px, 51vw, 700px);
+  width: clamp(25vmin, 70vmin, 90vmin);
   padding: 16px;
 }
 
 .featured-article-tagline {
-  /* width: clamp(375px, 51vw, 100vw); */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   font-size: clamp(10px, 14px, 18px);
   margin-bottom: 20px;
-/* border: 2px solid purple; */
 }
 
 .featured-article-overview {
@@ -72,13 +65,9 @@
   }
 
   .inner-wrapper {
-    /* Controls the inner spacing and ensures content is well-contained */
     padding: 10px 15px;
-    /* Adds padding inside the description area */
     background-color: #3f1478;
-    /* Background color for description box */
     border-radius: 5px;
-    /* Rounds the corners of the description box */
   }
 }
 
@@ -90,49 +79,4 @@
   margin-top: 25px;
   margin-bottom: 25px;
   max-width: 600px;
-}
-
-.featured-article-detail {
-  width: 105px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: flex-start;
-  border: 2px solid rgb(254, 254, 254);
-  padding: 10px;
-  min-width: 100px;
-}
-
-
-
-
-.featured-article-videos {
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin: 10px;
-}
-
-.video-container {
-  margin-bottom: 5vh;
-  text-align: center;
-}
-
-.video {
-  width: 75vw;
-  height: 42vw;
-  border-width: 1.5px;
-  border-style: solid;
-  border-color: rgb(23, 178, 147);
-  border-image: none;
-}
-
-@media screen and (max-width: 885px) {
-  .featured-article-all-details {
-    flex-wrap: wrap;
-    justify-content: left;
-  }
 }
