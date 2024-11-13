@@ -16,12 +16,17 @@ Start the application locally and open it in your browser. It's that simple!
 
 
 ## Preview
-
+Main view
 ![Screenshot of News App screen](./src/components/PreviewImages/Screenshot0.png)
-
+Main view
 ![Screenshot of News App screen](./src/components/PreviewImages/Screenshot1.png)
+Detailed view
+![Screenshot of News App screen](./src/components/PreviewImages/Screenshot4.png)
 
-
+Mobile main view
+![Screenshot of News App screen](./src/components/PreviewImages/Screenshot2.png)
+Mobile detailed view
+![Screenshot of News App screen](./src/components/PreviewImages/Screenshot3.png)
 
 ## Contributors
 - O'leary, Ryan
