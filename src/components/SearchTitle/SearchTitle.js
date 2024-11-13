@@ -23,7 +23,7 @@ function SearchTitle({ setFilteredArticles, articleList, filteredArticles, setSe
   function clearForm() {
     setFilteredArticles(articleList);
     setUserSearchInput('');
-    setSearchTerm('');
+    setSearchTerm(' ');
   }
 
   const handleSearchReset = (e) => {
